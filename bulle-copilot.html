@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bulle Copilot Segula</title>
+  <style>
+    #fakeCopilotButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 9999;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Bulle flottante -->
+<button id="fakeCopilotButton" title="Ouvrir Copilot">💬</button>
+
+<!-- Script JavaScript -->
+<script>
+  document.getElementById('fakeCopilotButton').addEventListener('click', function() {
+    try {
+      const copilotButton = document.querySelector('[title="Copilot"]');
+      if (copilotButton) {
+        copilotButton.click();
+      } else {
+        alert("Copilot introuvable sur cette page.");
+      }
+    } catch (e) {
+      console.error("Erreur lors de l'ouverture de Copilot :", e);
+    }
+  });
+</script>
+
+</body>
+</html>

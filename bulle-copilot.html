@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <title>Bulle Copilot Segula</title>
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+    }
+
     #fakeCopilotButton {
       position: fixed;
       bottom: 20px;
@@ -31,7 +38,7 @@
 <script>
   document.getElementById('fakeCopilotButton').addEventListener('click', function() {
     try {
-      const copilotButton = document.querySelector('[title="Copilot"]');
+      const copilotButton = parent.document.querySelector('[title="Copilot"]');
       if (copilotButton) {
         copilotButton.click();
       } else {
